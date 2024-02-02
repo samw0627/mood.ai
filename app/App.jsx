@@ -2,14 +2,17 @@
 import React, { useEffect, useState } from "react";
 import { DeepChat } from "deep-chat-react";
 import "./globals.css";
+import ButtonAppBar from "./components/Header";
 function App() {
 
   const initialMessages = [
     { role: "user", text: "Hey, how are you today?" },
     { role: "ai", text: "I am doing very well!" },
   ];
+
 return (
     <div className="App">
+    <ButtonAppBar />
     <DeepChat
         demo={true}
         style={{ borderRadius: "10px" , height: "calc(100vh - 70px)", width:"96vw"}}
