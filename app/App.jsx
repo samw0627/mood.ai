@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import { DeepChat } from "deep-chat-react";
 import "./globals.css";
 import ButtonAppBar from "./components/Header";
-function App() {
+import '@fontsource/roboto/700.css';
 
+
+function App() {
   const initialMessages = [
     { role: "user", text: "Hey, how are you today?" },
     { role: "ai", text: "I am doing very well!" },
