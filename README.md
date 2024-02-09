@@ -14,3 +14,11 @@ npm run dev
 
 mood.ai MVP allows you to experiment with how different health data changes the interaction with the AI companion. By clicking the Menu Icon on the top left, you can modify the heartrate and body temperature and the chatbot will start a conversation based on such health metrics.
 
+<div>
+  <img src="img1.png" alt="drawing" width="400"/>
+  <img src="img2.png" alt="drawing" width="400"/>
+</div>
+
+
+
+
