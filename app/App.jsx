@@ -18,10 +18,15 @@ return (
     <div className="App">
     <ButtonAppBar />
     <DeepChat
-        demo={true}
         style={{ borderRadius: "10px" , height: "calc(100vh - 70px)", width:"96vw"}}
         textInput={{ placeholder: { text: "Welcome to the demo!" } }}
         initialMessages={initialMessages}
+        directConnection={{"openAI": {
+          "key": "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",
+          "assistant": {
+            "assistant_id": "asst_XwOFUudpWkGu0qR1z2ISp7NG"
+          }
+        }}}
     />
     </div>
 );
