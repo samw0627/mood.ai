@@ -7,13 +7,11 @@ import '@fontsource/roboto/700.css';
 import { BiodataContext } from "./BiodataContext";
 
 function App() {
-  const [instMsg, useInstMsg] = useState("");
   
+  const { heartrate, temperature } = React.useContext(BiodataContext);
   const initialMessages = [
-    { role: "user", text: "Hey, how are you today?" },
-    { role: "ai", text: "I am doing very well!" },
+    { role: "ai", text: "Hey! It seems that your heart rate is " + heartrate +" bpm, which is higher than your average high rate, is everything okay?" },
   ];
-
 return (
     <div className="App">
     <ButtonAppBar />
