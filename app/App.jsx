@@ -7,11 +7,32 @@ import '@fontsource/roboto/700.css';
 import { BiodataContext } from "./BiodataContext";
 
 function App() {
-  
+  const [initMsg, setInitMsg] = useState("Hi! How are you feeling today?");
   const { heartrate, temperature } = React.useContext(BiodataContext);
   const initialMessages = [
-    { role: "ai", text: "Hey! It seems that your heart rate is " + heartrate +" bpm, which is higher than your average high rate, is everything okay?" },
+    { role: "ai", text: initMsg },
   ];
+
+
+  const handleInitMsg = () => {
+    if (heartrate > 100 && temperature > 37.5) {
+      setInitMsg("It seems that your heart rate is " + heartrate +" bpm and your body temperature is "+temperature+ "which is higher than your average high rate, is everything okay?");
+      return
+    }
+    if(heartrate > 100){
+      setInitMsg("It seems that your heart rate is " + heartrate +" bpm, which is higher than your average high rate, is everything okay?");
+      return
+    }
+    else{
+      setInitMsg("Hi! How are you feeling today?")
+      return
+  }
+  }
+  
+  useEffect(() => {
+    handleInitMsg();
+  }, [heartrate, temperature]);
+
 return (
     <div className="App">
     <ButtonAppBar />
