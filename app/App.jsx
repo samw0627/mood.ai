@@ -46,6 +46,7 @@ return (
             "assistant_id": "asst_XwOFUudpWkGu0qR1z2ISp7NG"
           }
         }}}
+        textToSpeech={true}
     />
     </div>
 );
