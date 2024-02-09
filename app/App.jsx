@@ -4,9 +4,11 @@ import { DeepChat } from "deep-chat-react";
 import "./globals.css";
 import ButtonAppBar from "./components/Header";
 import '@fontsource/roboto/700.css';
-
+import { BiodataContext } from "./BiodataContext";
 
 function App() {
+  const [instMsg, useInstMsg] = useState("");
+  
   const initialMessages = [
     { role: "user", text: "Hey, how are you today?" },
     { role: "ai", text: "I am doing very well!" },
